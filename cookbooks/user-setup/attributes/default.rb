@@ -2,14 +2,16 @@
 # username -> shell
 
 # TODO: find a better way to manage users
-node['users']['shells'] = [
+default['users']['shells'] = {
   'olive' => '/usr/bin/zsh',
-],
+},
 
 # Keep it sorted
-node['users']['package_list'] = [
+default['users']['package_list'] = [
+  'git',
   'irssi',
-  'tcptraceroute',
+  'pass',
+ 'tcptraceroute',
   'tmux',
   'traceroute-nanog',
   'whois',
