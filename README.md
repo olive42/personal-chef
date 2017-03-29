@@ -6,3 +6,8 @@ RSA private key. See
 https://learn.chef.io/tutorials/manage-a-node/ubuntu/hosted/set-up-your-chef-server/
 for more detail.
 
+# How to setup
+
+- Clone this repo
+- Install the ChefDK on your workstation
+- `knife bootstrap <remote-IP> --sudo -N <nodename> -x <username>`
