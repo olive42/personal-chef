@@ -7,14 +7,14 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Install shells
-node['users']['shells'].each do |user, shell|
-  user user do
-    shell shell
-  end
-end
-
 # Install packages
 node['users']['package_list'].each do |p|
   package p
+end
+
+# Setup shells for users - make sure the packages are installed first!
+node['users']['shells'].each do |u, s|
+  user u do
+    shell s
+  end
 end
