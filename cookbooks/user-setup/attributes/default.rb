@@ -10,6 +10,7 @@ default['users']['shells'] = {
 # Keep it sorted
 default['users']['package_list'] = [
   'git',
+  'ipcalc',
   'irssi',
   'pass',
   'tcptraceroute',
