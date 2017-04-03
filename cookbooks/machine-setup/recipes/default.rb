@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: user-setup
+# Cookbook Name:: machine-setup
 # Recipe:: default
 #
 # Copyright 2017, oliveth

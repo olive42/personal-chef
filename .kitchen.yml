@@ -15,7 +15,8 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[user-setup::default]
+    - recipe[machine-setup::default]
+    - recipe[user-files::default]
     verifier:
       inspec_tests:
         - test/smoke/default
