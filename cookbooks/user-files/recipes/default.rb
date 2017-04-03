@@ -24,3 +24,24 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+directory '/home' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+end
+
+node['usernames'].each do |u|
+  directory "/home/#{u}" do
+    user u
+  end
+
+  node['users'][u]['personal_dirs'].each do |d|
+    directory "/home/#{u}/#{d}" do
+      mode 0755
+      user u
+      group u
+      :create
+    end
+  end
+end
+
