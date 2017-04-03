@@ -18,3 +18,5 @@ node['users']['shells'].each do |u, s|
     shell s
   end
 end
+
+include_recipe 'machine-setup::network'
