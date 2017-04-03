@@ -8,9 +8,7 @@
 #
 
 # Install packages
-node['users']['package_list'].each do |p|
-  package p
-end
+package node['users']['package_list']
 
 # Setup shells for users - make sure the packages are installed first!
 node['users']['shells'].each do |u, s|
