@@ -5,6 +5,10 @@
     ".tmux.conf": {
       "source": "dot-tmux.conf",
       "mode": "0444"
+    },
+    ".gitconfig": {
+      "source": "dot-gitconfig",
+      "mode": "0444"
     }
   }
 }

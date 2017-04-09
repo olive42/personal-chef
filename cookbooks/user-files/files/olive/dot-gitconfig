@@ -1,0 +1,15 @@
+# Dropped by Chef, thanks!
+[user]
+        name = Olivier Tharan
+        email = olivier@tharan.org
+
+[core]
+        editor = emacs
+        pager = less -FRSX
+
+[alias]
+        alias = !git config --get-regexp alias
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+[grep]
+        lineNumber = true
