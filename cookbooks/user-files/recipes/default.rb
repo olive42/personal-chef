@@ -30,18 +30,42 @@ directory '/home' do
   mode '0755'
 end
 
-node['usernames'].each do |u|
-  directory "/home/#{u}" do
-    user u
+# TODO: add support for gid != uid
+# TODO: add support for MacOS vs Linux
+search(:users) do |u|
+  home_dir = "/home/#{u['id']}"
+
+  user "#{u['id']}" do
+    home "#{home_dir}"
   end
 
-  node['users'][u]['personal_dirs'].each do |d|
-    directory "/home/#{u}/#{d}" do
-      mode 0755
-      user u
-      group u
-      :create
+  if u.key?('directories')
+    u['directories'].each do |dir|
+      directory "#{home_dir}/#{dir}" do
+        recursive true
+        mode '0755'
+        user u['id']
+        group u['id']
+        :create
+      end
+    end
+  end
+
+  if u.key?('files')
+    u['files'].each do |filename, file_data|
+      if file_data.key?('sub_dir')
+        directory "#{home_dir}/#{::File.dirname(filename)}" do
+          recursive true
+          mode '0755'
+        end
+      end
+
+      cookbook_file "#{home_dir}/#{filename}" do
+        source "#{u['id']}/#{file_data['source']}"
+        owner u['id']
+        group u['id']
+        mode '0444'
+      end
     end
   end
 end
-
