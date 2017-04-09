@@ -1,5 +1,6 @@
 {
   "id": "olive",
+  "directories":[".emacs.d",".zsh.d"],
   "files": {
     ".tmux.conf": {
       "source": "dot-tmux.conf",
