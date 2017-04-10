@@ -26,6 +26,9 @@ setopt \
 
 # end of options
 
+PS1="%n@%2m: %d%(?..(%?%)) 
+: %D{%Y:%m:%d} %T %#; "
+
 path+=(/usr/local/bin ~/bin /usr/local/go/bin)
 fpath+=(~/.zfunctions)
 
