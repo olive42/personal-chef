@@ -8,13 +8,6 @@
 #
 
 # Install packages
-package node['users']['package_list']
-
-# Setup shells for users - make sure the packages are installed first!
-node['users']['shells'].each do |u, s|
-  user u do
-    shell s
-  end
-end
+package node['package_list']
 
 include_recipe 'machine-setup::network'
