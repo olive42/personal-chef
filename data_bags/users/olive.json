@@ -9,6 +9,10 @@
     ".gitconfig": {
       "source": "dot-gitconfig",
       "mode": "0444"
+    },
+    ".zshrc": {
+      "source": "dot-zshrc",
+      "mode": "0444"
     }
   }
 }
