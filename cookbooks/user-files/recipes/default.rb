@@ -35,8 +35,8 @@ end
 search(:users) do |u|
   home_dir = "/home/#{u['id']}"
 
-  user "#{u['id']}" do
-    home "#{home_dir}"
+  user u['id'].to_s do
+    home home_dir
   end
 
   if u.key?('directories')
