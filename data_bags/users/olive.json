@@ -1,6 +1,6 @@
 {
   "id": "olive",
-  "directories":[".emacs.d",".zsh.d"],
+  "directories":[".emacs.d",".irssi",".zsh.d"],
   "files": {
     ".tmux.conf": {
       "source": "dot-tmux.conf",
@@ -14,5 +14,24 @@
       "source": "dot-zshrc",
       "mode": "0444"
     }
+  },
+  "irc": {
+    "servers": [
+        {
+            "id": "Freenode",
+            "server": "chat.freenode.net",
+            "port": "6697",
+            "nick": "oth",
+            "chatnet_opts": "autosendcmd = \"/^msg nickserv identify XXX; wait 2000\";",
+            "channels": ["##computer", "##computer-enthusiasm"]
+        },
+        {
+            "id": "LO",
+            "server": "irc.lost-oasis.net",
+            "port": "6667",
+            "nick": "olive",
+            "channels": ["#vieuxcons"]
+        }
+    ]
   }
 }

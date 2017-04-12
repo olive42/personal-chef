@@ -68,4 +68,14 @@ search(:users) do |u|
       end
     end
   end
+
+  if u.key?('irc')
+    template "#{home_dir}/.irssi/config" do
+      source "#{u['id']}/dot-irssi-config.erb"
+      owner u['id']
+      group u['id']
+      mode '0644'
+      variables(servers: u['irc']['servers'])
+    end
+  end
 end
