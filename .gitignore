@@ -1,3 +1,6 @@
+.bundle
 .chef
 *~
+Gemfile.lock
 .kitchen
+vendor
