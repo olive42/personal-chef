@@ -1,5 +1,5 @@
 name             'machine-setup'
-maintainer       'oliveth'
+maintainer       'Olivier Tharan'
 maintainer_email 'olivier@tharan.org'
 license          'All rights reserved'
 description      'Installs/Configures machine-setup'
