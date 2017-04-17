@@ -38,3 +38,13 @@ describe 'user-files::default' do
     end
   end
 end
+
+describe 'user-files::default' do
+  include ChefVault::TestFixtures.rspec_shared_context
+
+  let(:chef_run) { ChefSpec::SoloRunner.new.converge(described_recipe) }
+
+  it 'should converge' do
+    expect(chef_run).to include_recipe(described_recipe)
+  end
+end

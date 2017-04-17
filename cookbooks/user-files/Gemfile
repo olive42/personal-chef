@@ -1,0 +1,1 @@
+gem 'chef-vault-testfixtures', '~> 0.3'
