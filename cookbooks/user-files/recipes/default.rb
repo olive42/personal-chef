@@ -24,6 +24,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+include_recipe 'chef-vault'
+vault = chef_vault_item(:credentials, 'userpass')
+
 directory '/home' do
   owner 'root'
   group 'root'
@@ -75,7 +78,10 @@ search(:users) do |u|
       owner u['id']
       group u['id']
       mode '0644'
-      variables(servers: u['irc']['servers'])
+      variables(
+        servers: u['irc']['servers'],
+        pass: vault['irc']
+      )
     end
   end
 end
