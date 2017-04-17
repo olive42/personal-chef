@@ -3,8 +3,7 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
-  always_update_cookbooks: false
+  name: policyfile_zero
 
 verifier:
   name: inspec
@@ -14,10 +13,9 @@ platforms:
 
 suites:
   - name: default
-    run_list:
-    - recipe[machine-setup::default]
-    - recipe[user-files::default]
     verifier:
       inspec_tests:
         - test/smoke/default
     attributes:
+      chef_vault:
+        databag_fallback: true

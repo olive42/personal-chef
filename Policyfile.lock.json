@@ -1,0 +1,99 @@
+{
+  "revision_id": "95d63c2bb80b5e7d1fc4299a60df27310443791c3042759144f2c3ccd6dac07f",
+  "name": "personal-chef",
+  "run_list": [
+    "recipe[machine-setup::default]",
+    "recipe[user-files::default]"
+  ],
+  "cookbook_locks": {
+    "chef-vault": {
+      "version": "2.1.1",
+      "identifier": "1cc4ba18bb330be2636308f407a6eb78a4a5bbfd",
+      "dotted_decimal_identifier": "8097602905781003.63722621739730854.258903390927869",
+      "cache_key": "chef-vault-2.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/2.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/2.1.1/download",
+        "version": "2.1.1"
+      }
+    },
+    "machine-setup": {
+      "version": "0.3.0",
+      "identifier": "041fb629dbf8f8574023fe7d134e2268aa67a5d4",
+      "dotted_decimal_identifier": "1160767153633528.24558846311469902.37832930862548",
+      "source": "cookbooks/machine-setup",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:olive42/personal-chef.git",
+        "revision": "7a67706afc8019a5127416368d572e88b34b58ae",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbooks/machine-setup"
+      }
+    },
+    "user-files": {
+      "version": "0.2.0",
+      "identifier": "32a85423f3f384e148761439331dbe26c0b7e57a",
+      "dotted_decimal_identifier": "14258828169442180.63411541742531357.209073651311994",
+      "source": "cookbooks/user-files",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:olive42/personal-chef.git",
+        "revision": "7a67706afc8019a5127416368d572e88b34b58ae",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "cookbooks/user-files"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef-vault",
+        "= 2.1.1"
+      ],
+      [
+        "machine-setup",
+        ">= 0.0.0"
+      ],
+      [
+        "user-files",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "machine-setup (0.3.0)": [
+
+      ],
+      "user-files (0.2.0)": [
+        [
+          "chef-vault",
+          ">= 0.0.0"
+        ]
+      ],
+      "chef-vault (2.1.1)": [
+
+      ]
+    }
+  }
+}
