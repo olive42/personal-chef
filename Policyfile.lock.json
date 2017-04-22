@@ -1,22 +1,11 @@
 {
-  "revision_id": "95d63c2bb80b5e7d1fc4299a60df27310443791c3042759144f2c3ccd6dac07f",
+  "revision_id": "6292aadcff86ebc4378dbb56a76eeb88f27e44c0da3debe3883549d4414de366",
   "name": "personal-chef",
   "run_list": [
     "recipe[machine-setup::default]",
     "recipe[user-files::default]"
   ],
   "cookbook_locks": {
-    "chef-vault": {
-      "version": "2.1.1",
-      "identifier": "1cc4ba18bb330be2636308f407a6eb78a4a5bbfd",
-      "dotted_decimal_identifier": "8097602905781003.63722621739730854.258903390927869",
-      "cache_key": "chef-vault-2.1.1-supermarket.chef.io",
-      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/2.1.1/download",
-      "source_options": {
-        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/2.1.1/download",
-        "version": "2.1.1"
-      }
-    },
     "machine-setup": {
       "version": "0.3.0",
       "identifier": "041fb629dbf8f8574023fe7d134e2268aa67a5d4",
@@ -26,12 +15,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "7a67706afc8019a5127416368d572e88b34b58ae",
+        "revision": "8432aa55e68bbd27943999593f9ab3504b6cf9ae",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
@@ -40,19 +28,18 @@
     },
     "user-files": {
       "version": "0.2.0",
-      "identifier": "32a85423f3f384e148761439331dbe26c0b7e57a",
-      "dotted_decimal_identifier": "14258828169442180.63411541742531357.209073651311994",
+      "identifier": "9e122a10011d4553207776a55ea1d6e0df518c73",
+      "dotted_decimal_identifier": "44493018186718533.23398120530730657.236261307681907",
       "source": "cookbooks/user-files",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "7a67706afc8019a5127416368d572e88b34b58ae",
+        "revision": "8432aa55e68bbd27943999593f9ab3504b6cf9ae",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
@@ -69,10 +56,6 @@
   "solution_dependencies": {
     "Policyfile": [
       [
-        "chef-vault",
-        "= 2.1.1"
-      ],
-      [
         "machine-setup",
         ">= 0.0.0"
       ],
@@ -86,12 +69,6 @@
 
       ],
       "user-files (0.2.0)": [
-        [
-          "chef-vault",
-          ">= 0.0.0"
-        ]
-      ],
-      "chef-vault (2.1.1)": [
 
       ]
     }
