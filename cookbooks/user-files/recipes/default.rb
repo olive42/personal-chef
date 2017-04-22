@@ -84,4 +84,15 @@ search(:users) do |u|
       )
     end
   end
+
+  if u.key?('authorized_keys')
+    template "#{home_dir}/.ssh/authorized_keys" do
+      source "#{u['id']}/authorized_keys.erb"
+      owner u['id']
+      group u['id']
+      mode '0600'
+      variables(
+        sshkeys: u['authorized_keys']
+      )
+  end
 end

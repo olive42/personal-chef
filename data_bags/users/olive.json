@@ -1,6 +1,6 @@
 {
   "id": "olive",
-  "directories":[".emacs.d",".irssi",".zsh.d"],
+  "directories":[".emacs.d",".irssi",".ssh",".zsh.d"],
   "files": {
     ".tmux.conf": {
       "source": "dot-tmux.conf",
@@ -34,5 +34,8 @@
             "channels": ["#vieuxcons"]
         }
     ]
-  }
+  },
+  "authorized_keys": [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDUOlHSe5llOW9zD8oOqZOM/2La7mnSy/kvVNgpyKdt9 olive@alienware"
+  ]
 }
