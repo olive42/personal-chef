@@ -21,6 +21,7 @@
             "id": "Freenode",
             "server": "chat.freenode.net",
             "port": "6697",
+            "ssl": "yes",
             "nick": "oth",
             "chatnet_opts": "autosendcmd = \"/^msg nickserv identify <%= @pass[s['id'].downcase] %>; wait 2000\";",
             "channels": ["##computer", "##computer-enthusiasm"]

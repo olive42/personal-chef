@@ -4,6 +4,9 @@ servers = (
     address = "<%= s['server'] %>";
     chatnet = "<%= s['id'] %>";
     port = "<%= s['port'] %>";
+    <% if s['ssl'] %>
+    use_ssl = "<%= s['ssl'] %>";
+    <% end %>
   },
 <% end -%>
 );
