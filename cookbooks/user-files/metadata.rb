@@ -17,3 +17,5 @@ issues_url 'https://github.com/olive42/personal-chef/issues' if respond_to?(:iss
 # a Supermarket.
 #
 source_url 'https://github.com/olive42/personal-chef/tree/master/cookbooks/user-files' if respond_to?(:source_url)
+
+depends 'chef-vault'

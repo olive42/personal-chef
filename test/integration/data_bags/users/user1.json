@@ -1,0 +1,18 @@
+{
+    "id": "olive",
+    "directories":[".ssh",".irssi"],
+    "irc":{
+        "servers":[
+            {
+                "id":"IRC1",
+                "server":"irc.example.com",
+                "port":"6667",
+                "nick":"user1",
+                "channels":["#user1"]
+            }
+        ]
+    },
+    "sshkeys":[
+        "ssh-test pouet user1@example.com"
+    ]
+}

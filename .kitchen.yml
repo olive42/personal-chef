@@ -13,6 +13,7 @@ platforms:
 
 suites:
   - name: default
+    data_bags_path: "test/integration/data_bags"
     verifier:
       inspec_tests:
         - test/smoke/default
