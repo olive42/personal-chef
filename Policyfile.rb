@@ -4,15 +4,15 @@
 # https://docs.chef.io/policyfile.html
 
 # A name that describes what the system you're building with Chef does.
-name "personal-chef"
+name 'personal-chef'
 
 # Where to find external cookbooks:
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list "machine-setup::default", "user-files::default"
+run_list 'machine-setup::default', 'user-files::default'
 
 # Specify a custom source for a single cookbook:
 # cookbook "example_cookbook", path: "../cookbooks/example_cookbook"
-cookbook 'machine-setup', path: "cookbooks/machine-setup"
-cookbook 'user-files', path: "cookbooks/user-files"
+cookbook 'machine-setup', path: 'cookbooks/machine-setup'
+cookbook 'user-files', path: 'cookbooks/user-files'

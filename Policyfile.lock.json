@@ -1,5 +1,5 @@
 {
-  "revision_id": "918983af0196929c4b7c2326365cbf3fc3944aa617f36ba670f406eabe38d3f6",
+  "revision_id": "f2dac7ebadc91fbb21099ca9a0d41494e337c87dc122f1e5d00644745eed9faf",
   "name": "personal-chef",
   "run_list": [
     "recipe[machine-setup::default]",
@@ -8,19 +8,18 @@
   "cookbook_locks": {
     "machine-setup": {
       "version": "0.3.0",
-      "identifier": "9847893533c9eb170d0da09ae355d28039f20f16",
-      "dotted_decimal_identifier": "42862851088697835.6488276644586325.231448169811734",
+      "identifier": "a6545e45f479db330b21030a229aaa1b7e9c6705",
+      "dotted_decimal_identifier": "46817610011277787.14367460225065626.187035065018117",
       "source": "cookbooks/machine-setup",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "419ff9725f3952a22e3734062ce7af20c832e93d",
+        "revision": "e90517ea22eb291781ded81a591cfd93f8736546",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
@@ -29,19 +28,18 @@
     },
     "user-files": {
       "version": "0.2.0",
-      "identifier": "557786fefa0f7358e41d194cb019609ab9fc8afc",
-      "dotted_decimal_identifier": "24056794707529587.25020611580178457.106217661565692",
+      "identifier": "66a718e9945a7e62d81415218b449c1e951bb7dc",
+      "dotted_decimal_identifier": "28894173064354430.27822128483109700.171655164573660",
       "source": "cookbooks/user-files",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "419ff9725f3952a22e3734062ce7af20c832e93d",
+        "revision": "e90517ea22eb291781ded81a591cfd93f8736546",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
@@ -82,9 +80,6 @@
       ]
     ],
     "dependencies": {
-      "chef-vault (2.1.1)": [
-
-      ],
       "machine-setup (0.3.0)": [
         [
           "chef-vault",
@@ -96,6 +91,9 @@
           "chef-vault",
           ">= 0.0.0"
         ]
+      ],
+      "chef-vault (2.1.1)": [
+
       ]
     }
   }
