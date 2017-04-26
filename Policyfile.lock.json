@@ -1,5 +1,5 @@
 {
-  "revision_id": "f2dac7ebadc91fbb21099ca9a0d41494e337c87dc122f1e5d00644745eed9faf",
+  "revision_id": "b8eb75fcc84ad2373cc394281fe3b2d4a77e6bb0e99c87e53d4b1357aabac051",
   "name": "personal-chef",
   "run_list": [
     "recipe[machine-setup::default]",
@@ -7,15 +7,15 @@
   ],
   "cookbook_locks": {
     "machine-setup": {
-      "version": "0.3.0",
-      "identifier": "a6545e45f479db330b21030a229aaa1b7e9c6705",
-      "dotted_decimal_identifier": "46817610011277787.14367460225065626.187035065018117",
+      "version": "0.4.0",
+      "identifier": "a20f95c128004c4954e1e85bf8773fb6e916f033",
+      "dotted_decimal_identifier": "45616082092294220.20641002542594167.70054827192371",
       "source": "cookbooks/machine-setup",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "e90517ea22eb291781ded81a591cfd93f8736546",
+        "revision": "7c6cf535fc2ff1bc35622a83781d981690e1715c",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -27,15 +27,15 @@
       }
     },
     "user-files": {
-      "version": "0.2.0",
-      "identifier": "66a718e9945a7e62d81415218b449c1e951bb7dc",
-      "dotted_decimal_identifier": "28894173064354430.27822128483109700.171655164573660",
+      "version": "0.3.0",
+      "identifier": "4b1748fef4351fa69f067f73dd65ebb60e9ac081",
+      "dotted_decimal_identifier": "21136225535800607.46899696390888805.259167161598081",
       "source": "cookbooks/user-files",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "e90517ea22eb291781ded81a591cfd93f8736546",
+        "revision": "7c6cf535fc2ff1bc35622a83781d981690e1715c",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -80,13 +80,13 @@
       ]
     ],
     "dependencies": {
-      "machine-setup (0.3.0)": [
+      "machine-setup (0.4.0)": [
         [
           "chef-vault",
           ">= 0.0.0"
         ]
       ],
-      "user-files (0.2.0)": [
+      "user-files (0.3.0)": [
         [
           "chef-vault",
           ">= 0.0.0"
