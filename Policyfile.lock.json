@@ -1,5 +1,5 @@
 {
-  "revision_id": "b8eb75fcc84ad2373cc394281fe3b2d4a77e6bb0e99c87e53d4b1357aabac051",
+  "revision_id": "47631c04a2e43046ee2ec2aeb27e60aedb841bc5ac32e1fc8972da91f5776603",
   "name": "personal-chef",
   "run_list": [
     "recipe[machine-setup::default]",
@@ -8,14 +8,14 @@
   "cookbook_locks": {
     "machine-setup": {
       "version": "0.4.0",
-      "identifier": "a20f95c128004c4954e1e85bf8773fb6e916f033",
-      "dotted_decimal_identifier": "45616082092294220.20641002542594167.70054827192371",
+      "identifier": "075d8d56cf2cac02261cd7636b056743cbb586ac",
+      "dotted_decimal_identifier": "2073186465164460.604855267977989.113540878141100",
       "source": "cookbooks/machine-setup",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "7c6cf535fc2ff1bc35622a83781d981690e1715c",
+        "revision": "e00e516bc18b7acc7a98aa8ee352420b34a1d378",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -28,14 +28,14 @@
     },
     "user-files": {
       "version": "0.3.0",
-      "identifier": "4b1748fef4351fa69f067f73dd65ebb60e9ac081",
-      "dotted_decimal_identifier": "21136225535800607.46899696390888805.259167161598081",
+      "identifier": "7a5344d79af12d275eedca5050f57dbb49e9e8f0",
+      "dotted_decimal_identifier": "34431502298837293.11081899486236917.138243352422640",
       "source": "cookbooks/user-files",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "7c6cf535fc2ff1bc35622a83781d981690e1715c",
+        "revision": "e00e516bc18b7acc7a98aa8ee352420b34a1d378",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -86,14 +86,14 @@
           ">= 0.0.0"
         ]
       ],
+      "chef-vault (2.1.1)": [
+
+      ],
       "user-files (0.3.0)": [
         [
           "chef-vault",
           ">= 0.0.0"
         ]
-      ],
-      "chef-vault (2.1.1)": [
-
       ]
     }
   }
