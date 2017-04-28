@@ -36,6 +36,7 @@
     ]
   },
   "authorized_keys": [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDUOlHSe5llOW9zD8oOqZOM/2La7mnSy/kvVNgpyKdt9 olive@alienware"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDUOlHSe5llOW9zD8oOqZOM/2La7mnSy/kvVNgpyKdt9 olive@alienware",
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBL1FLm0yBQWeUky4AB8YbMjK2an7xjotmf5BYyu4h/R olive@syrah.local"
   ]
 }
