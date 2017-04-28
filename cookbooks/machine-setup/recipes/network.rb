@@ -29,6 +29,7 @@ execute 'systemctl-daemon-reload' do
   action :nothing
 end
 
-# service 'dhclient6' do
-#   action [ :enable, :start ]
-# end
+service 'dhclient6' do
+  # action [ :enable, :start ]
+  action [:enable]
+end
