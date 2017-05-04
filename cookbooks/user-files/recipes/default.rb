@@ -36,10 +36,14 @@ end
 # TODO: add support for gid != uid
 # TODO: add support for MacOS vs Linux
 search(:users) do |u|
-  home_dir = "/home/#{u['id']}"
+  user = u['id']
+  home_dir = "/home/#{user}"
+  group = (u.key?('group') ? u['group'] : user)
 
-  user u['id'].to_s do
+  shell = (u.key?('shell') ? u['shell'] : '/bin/bash')
+  user user do
     home home_dir
+    shell shell
   end
 
   if u.key?('directories')
@@ -47,8 +51,8 @@ search(:users) do |u|
       directory "#{home_dir}/#{dir}" do
         recursive true
         mode '0755'
-        user u['id']
-        group u['id']
+        owner user
+        group group
         :create
       end
     end
@@ -60,13 +64,15 @@ search(:users) do |u|
         directory "#{home_dir}/#{::File.dirname(filename)}" do
           recursive true
           mode '0755'
+          owner user
+          group group
         end
       end
 
       cookbook_file "#{home_dir}/#{filename}" do
-        source "#{u['id']}/#{file_data['source']}"
-        owner u['id']
-        group u['id']
+        source "#{user}/#{file_data['source']}"
+        owner user
+        group group
         mode '0444'
       end
     end
@@ -74,9 +80,9 @@ search(:users) do |u|
 
   if u.key?('irc')
     template "#{home_dir}/.irssi/config" do
-      source "#{u['id']}/dot-irssi-config.erb"
-      owner u['id']
-      group u['id']
+      source "#{user}/dot-irssi-config.erb"
+      owner user
+      group group
       mode '0644'
       variables(
         servers: u['irc']['servers'],
@@ -87,9 +93,9 @@ search(:users) do |u|
 
   if u.key?('authorized_keys')
     template "#{home_dir}/.ssh/authorized_keys" do
-      source "#{u['id']}/authorized_keys.erb"
-      owner u['id']
-      group u['id']
+      source "#{user}/authorized_keys.erb"
+      owner user
+      group group
       mode '0600'
       variables(
         sshkeys: u['authorized_keys']
