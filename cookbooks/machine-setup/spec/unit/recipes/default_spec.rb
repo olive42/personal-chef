@@ -37,8 +37,8 @@ describe 'machine-setup::default' do
       expect(chef_run).to install_package('git')
     end
 
-    #it 'converges successfully' do
-    #  expect { chef_run }.to_not raise_error
-    #end
+    it 'converges successfully' do
+      expect { chef_run }.to_not raise_error
+    end
   end
 end
