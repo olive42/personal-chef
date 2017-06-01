@@ -5,6 +5,10 @@ default['package_list'] = %w(fail2ban git ipcalc irssi pass powerline
 # This should be overridable in kitchen test
 default['machine']['default_interface'] = 'enp0s20'
 
+# Caddy setup
+default['caddy']['email'] = 'olivier@tharan.org'
+default['caddy']['features'] = 'tls.dns.gandi'
+
 # List of networks to blacklist (iptables -j DROP -I INPUT)
 default['machine']['network_blacklist'] = [
   '5.189.144.0/20',

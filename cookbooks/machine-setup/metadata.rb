@@ -23,3 +23,4 @@ if respond_to?(:source_url)
 end
 
 depends 'chef-vault'
+depends 'caddy'
