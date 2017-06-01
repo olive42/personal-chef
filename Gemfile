@@ -5,6 +5,7 @@ gem 'chef-vault'
 gem 'foodcritic'
 gem 'kitchen-vagrant'
 gem 'knife-spec'
+gem 'knife-zero'
 gem 'rubocop'
 
 group 'integration' do
