@@ -1,8 +1,20 @@
+# Standard Chef/Ruby
 .bundle
 .chef
-*~
 Gemfile.lock
+
+# Backups
+*~
+
+# Kitchen tests
 .kitchen
 vendor
 .kitchen/
 .kitchen.local.yml
+
+# Created by chef export
+cookbook_artifacts
+clients
+nodes
+policies
+policy_groups
