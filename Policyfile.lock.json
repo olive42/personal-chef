@@ -1,6 +1,6 @@
 {
-  "revision_id": "6e8ded9f5b6532549ebb36c4dced0796a80480ccacd5c3218dbc1b4db471088d",
-  "name": "personal-chef",
+  "revision_id": "3b0e001fac0f1d902131672881367f241d9301b414d0e6ddfbd7c91f78c4a5a0",
+  "name": "personalchef",
   "run_list": [
     "recipe[machine-setup::default]",
     "recipe[caddy::default]",
@@ -16,7 +16,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "70a0e787b92bcdcdd4f83d5c9e4542bd45efa87d",
+        "revision": "59eb90651f47f8e40a7e7751708a17939be4e31f",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -37,7 +37,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:olive42/personal-chef.git",
-        "revision": "70a0e787b92bcdcdd4f83d5c9e4542bd45efa87d",
+        "revision": "59eb90651f47f8e40a7e7751708a17939be4e31f",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -61,14 +61,14 @@
       }
     },
     "chef-vault": {
-      "version": "2.1.1",
-      "identifier": "1cc4ba18bb330be2636308f407a6eb78a4a5bbfd",
-      "dotted_decimal_identifier": "8097602905781003.63722621739730854.258903390927869",
-      "cache_key": "chef-vault-2.1.1-supermarket.chef.io",
-      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/2.1.1/download",
+      "version": "3.0.0",
+      "identifier": "53c5e40d0756bf848724d0f67a77e1ae32d3a420",
+      "dotted_decimal_identifier": "23580006328784575.37303289120193143.248138293290016",
+      "cache_key": "chef-vault-3.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/3.0.0/download",
       "source_options": {
-        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/2.1.1/download",
-        "version": "2.1.1"
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/3.0.0/download",
+        "version": "3.0.0"
       }
     },
     "ark": {
@@ -80,6 +80,17 @@
       "source_options": {
         "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ark/versions/3.1.0/download",
         "version": "3.1.0"
+      }
+    },
+    "compat_resource": {
+      "version": "12.19.0",
+      "identifier": "215097eec00a7969a00a551aaad1fa7ddea24e30",
+      "dotted_decimal_identifier": "9377287707298425.29730838792547025.275418513034800",
+      "cache_key": "compat_resource-12.19.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.19.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.19.0/download",
+        "version": "12.19.0"
       }
     },
     "build-essential": {
@@ -94,14 +105,14 @@
       }
     },
     "windows": {
-      "version": "3.1.0",
-      "identifier": "d1861fef67c6cb6d7cb92a7eb59584557b02bdeb",
-      "dotted_decimal_identifier": "58975741851190987.30817907185202581.145502670863851",
-      "cache_key": "windows-3.1.0-supermarket.chef.io",
-      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/3.1.0/download",
+      "version": "3.1.1",
+      "identifier": "b73725749cc74ff2005c00f6c692a91e3c6b772f",
+      "dotted_decimal_identifier": "51570554747799375.68117339517142674.185947327788847",
+      "cache_key": "windows-3.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/3.1.1/download",
       "source_options": {
-        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/3.1.0/download",
-        "version": "3.1.0"
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/3.1.1/download",
+        "version": "3.1.1"
       }
     },
     "seven_zip": {
@@ -160,11 +171,15 @@
       ],
       [
         "chef-vault",
-        "= 2.1.1"
+        "= 3.0.0"
       ],
       [
         "ark",
         "= 3.1.0"
+      ],
+      [
+        "compat_resource",
+        "= 12.19.0"
       ],
       [
         "build-essential",
@@ -172,7 +187,7 @@
       ],
       [
         "windows",
-        "= 3.1.0"
+        "= 3.1.1"
       ],
       [
         "seven_zip",
@@ -210,8 +225,11 @@
           ">= 0.0.0"
         ]
       ],
-      "chef-vault (2.1.1)": [
-
+      "chef-vault (3.0.0)": [
+        [
+          "compat_resource",
+          ">= 12.16.3"
+        ]
       ],
       "ark (3.1.0)": [
         [
@@ -227,6 +245,9 @@
           ">= 0.0.0"
         ]
       ],
+      "compat_resource (12.19.0)": [
+
+      ],
       "build-essential (8.0.3)": [
         [
           "seven_zip",
@@ -237,7 +258,7 @@
           ">= 1.1.0"
         ]
       ],
-      "windows (3.1.0)": [
+      "windows (3.1.1)": [
         [
           "ohai",
           ">= 4.0.0"
