@@ -1,4 +1,7 @@
 local_mode true
+use_policyfile true
+versioned_cookbooks true
+policy_document_native_api false
 chef_repo path File.expand_path('../', __FILE__)
 
 knife[:ssh_attribute] = 'knife_zero.host'
