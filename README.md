@@ -1,18 +1,36 @@
-# Chef environment
+# Exported Chef Repository for Policy 'personalchef'
 
-If using Hosted Chef, go to management console and get the knife.rb
-configuration file which you put under .chef. You also need your
-RSA private key. See
-https://learn.chef.io/tutorials/manage-a-node/ubuntu/hosted/set-up-your-chef-server/
-for more detail.
+Policy revision: 3b0e001fac0f1d902131672881367f241d9301b414d0e6ddfbd7c91f78c4a5a0
 
-# How to setup
+This directory contains all the cookbooks and configuration necessary for Chef
+to converge a system using this exported policy. To converge a system with the
+exported policy, use a privileged account to run `chef-client -z` from the
+directory containing the exported policy.
 
-- Clone this repo
-- Install the ChefDK on your workstation
-- `knife bootstrap <remote-IP> --sudo -N <nodename> -x <username>`
+## Contents:
 
-# Users data bags
+### Policyfile.lock.json
 
-- edit under data_bags/users/<username>.json
-- knife data bag from file users <username>.json
+A copy of the exported policy, used by the `chef push-archive` command.
+
+### .chef/config.rb
+
+A configuration file for Chef Client. This file configures Chef Client to use
+the correct `policy_name` and `policy_group` for this exported repository. Chef
+Client will use this configuration automatically if you've set your working
+directory properly.
+
+### cookbook_artifacts/
+
+All of the cookbooks required by the policy will be stored in this directory.
+
+### policies/
+
+A different copy of the exported policy, used by the `chef-client` command.
+
+### policy_groups/
+
+Policy groups are used by Chef Server to manage multiple revisions of the same
+policy. However, exported policies contain only a single policy revision, so
+this policy group name is hardcoded to "local" and should not be changed.
+
