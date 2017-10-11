@@ -21,5 +21,3 @@ if respond_to?(:source_url)
   source_url 'https://github.com/olive42/personal-chef/tree/master/cookbooks/' \
              'user-files'
 end
-
-depends 'chef-vault'

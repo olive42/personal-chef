@@ -1,5 +1,4 @@
-include_recipe 'chef-vault'
-vault = chef_vault_item(:credentials, 'serversecret')
+vault = data_bag_item('secrets', 'network', ::IO.read(node['machine_setup']['secret_file']))
 
 template '/etc/dhcp/dhclient6.conf' do
   group 'root'
@@ -8,8 +7,7 @@ template '/etc/dhcp/dhclient6.conf' do
   source 'dhclient6.conf.erb'
   variables(
     interface: node['machine']['default_interface'],
-    # duid: vault[node.name]['duid']
-    duid: vault['default-ubuntu-1610.vagrantup.com']['duid']
+    duid: vault['duid']
   )
 end
 

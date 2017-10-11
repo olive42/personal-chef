@@ -24,8 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-include_recipe 'chef-vault'
-vault = chef_vault_item(:credentials, 'userpass')
+vault = data_bag_item('secrets', 'userpass', ::IO.read(node['user_files']['secret_file']))
 
 directory '/home' do
   owner 'root'
@@ -86,7 +85,9 @@ search(:users) do |u|
       mode '0644'
       variables(
         servers: u['irc']['servers'],
-        pass: vault['irc']
+        # FIXME: this is another level of indirection, as <% @pass %>
+        # is defined inside the data bag and not expanded :/
+        pass: vault[user]['irc']
       )
     end
   end

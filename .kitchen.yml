@@ -12,5 +12,3 @@ suites:
   - name: default
     data_bags_path: "test/integration/data_bags"
     attributes:
-      chef_vault:
-        databag_fallback: true

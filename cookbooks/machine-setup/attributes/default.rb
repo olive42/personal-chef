@@ -1,3 +1,5 @@
+default['machine_setup']['secret_file'] = '/home/olive/.personal_chef_secret_key'
+
 # Keep it sorted
 default['package_list'] = %w(fail2ban git ipcalc irssi pass powerline
                              tcptraceroute tmux traceroute whois zsh)

@@ -22,5 +22,4 @@ if respond_to?(:source_url)
              'user-files'
 end
 
-depends 'chef-vault'
 depends 'caddy'
