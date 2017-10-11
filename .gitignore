@@ -23,3 +23,6 @@ policy_groups
 cookbooks/
 !cookbooks/user-files/
 !cookbooks/machine-setup/
+
+# Editors
+.vscode/
