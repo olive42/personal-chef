@@ -1,0 +1,4 @@
+{
+    "run_list": [ "recipe[machine-setup::default]",
+                  "recipe[user-files::default]" ]
+}

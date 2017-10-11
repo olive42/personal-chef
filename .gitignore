@@ -18,3 +18,8 @@ clients
 nodes
 policies
 policy_groups
+
+# Pulled by berks vendor -- ignore non-local cookbooks
+cookbooks/
+!cookbooks/user-files/
+!cookbooks/machine-setup/
