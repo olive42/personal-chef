@@ -50,6 +50,7 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDUOlHSe5llOW9zD8oOqZOM/2La7mnSy/kvVNgpyKdt9 olive@alienware",
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBL1FLm0yBQWeUky4AB8YbMjK2an7xjotmf5BYyu4h/R olive@syrah.local",
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOwzeqfdjmbFFJzzeKxAdwm8mCb+1CiFL9Mb7LSt1z/a o.tharan@C02S644UFVH8",
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICyA+375sC9cgOyHXml78eu0Ot3cWwZFYGKVdCwUnxzm o.tharan@le-tiret-du-6"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICyA+375sC9cgOyHXml78eu0Ot3cWwZFYGKVdCwUnxzm o.tharan@le-tiret-du-6",
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINaFI86McUC22RP2b6gQB284Jpmb+Td5EoR/Oa/X8aNt olive@miromesnil"
   ]
 }
