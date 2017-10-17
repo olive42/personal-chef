@@ -22,4 +22,4 @@ if respond_to?(:source_url)
              'user-files'
 end
 
-depends 'caddy'
+depends 'nginx'

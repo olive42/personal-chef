@@ -1,0 +1,11 @@
+server {
+    listen <%= node['nginx']['port'] -%>;
+    server_name bouffe.tharan.org;
+
+    access_log <%= node['nginx']['log_dir'] %>/bouffe.tharan.org.access.log;
+
+    location / {
+        root <%= node['nginx']['default_root'] %>;
+        index index.html;
+    }
+}
