@@ -1,36 +1,11 @@
-# Exported Chef Repository for Policy 'personalchef'
+# Purpose
 
-Policy revision: 3b0e001fac0f1d902131672881367f241d9301b414d0e6ddfbd7c91f78c4a5a0
+This repository configures a set of machines (most likely a single machines
+for now) with a `machine-setup` cookbook taking care of the machine-specific
+things (packages, system configuration, etc.) and a `user-files` cookbook
+taking care of users and their specific needs.
 
-This directory contains all the cookbooks and configuration necessary for Chef
-to converge a system using this exported policy. To converge a system with the
-exported policy, use a privileged account to run `chef-client -z` from the
-directory containing the exported policy.
+# Data bags
 
-## Contents:
-
-### Policyfile.lock.json
-
-A copy of the exported policy, used by the `chef push-archive` command.
-
-### .chef/config.rb
-
-A configuration file for Chef Client. This file configures Chef Client to use
-the correct `policy_name` and `policy_group` for this exported repository. Chef
-Client will use this configuration automatically if you've set your working
-directory properly.
-
-### cookbook_artifacts/
-
-All of the cookbooks required by the policy will be stored in this directory.
-
-### policies/
-
-A different copy of the exported policy, used by the `chef-client` command.
-
-### policy_groups/
-
-Policy groups are used by Chef Server to manage multiple revisions of the same
-policy. However, exported policies contain only a single policy revision, so
-this policy group name is hardcoded to "local" and should not be changed.
-
+- A `users` data bag contains per-user configuration.
+- A `secrets` encrypted data bag contains secrets.
