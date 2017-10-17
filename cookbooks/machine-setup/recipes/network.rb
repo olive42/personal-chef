@@ -28,6 +28,8 @@ execute 'systemctl-daemon-reload' do
 end
 
 service 'dhclient6' do
-  # action [ :enable, :start ]
   action [:enable]
 end
+
+# TODO: add DNS configuration via systemd cookbook
+# https://documentation.online.net/en/dedicated-server/network/dedibox-network
