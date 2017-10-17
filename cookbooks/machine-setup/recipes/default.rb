@@ -2,7 +2,7 @@
 # Cookbook Name:: machine-setup
 # Recipe:: default
 #
-# Copyright 2017, oliveth
+# Copyright 2017, Olivier Tharan <olivier@tharan.org>
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -16,6 +16,8 @@ include_recipe 'machine-setup::network'
 # Git repositories
 group 'git' do
   system true
+  # TODO: make this members of some attribute-driven 'admin' group
+  members ['olive']
 end
 
 user 'git' do
@@ -28,11 +30,12 @@ end
 
 directory '/var/opt/git' do
   owner 'git'
-  mode '0755'
+  mode '0750'
 end
 
+# TODO: uncomment once IPv6 resolution is fixed.
 # Nginx
-include_recipe 'nginx'
-nginx_site 'bouffe.tharan.org' do
-  template 'bouffe.tharan.org.conf.erb'
-end
+# include_recipe 'nginx'
+# nginx_site 'bouffe.tharan.org' do
+#   template 'bouffe.tharan.org.conf.erb'
+# end
