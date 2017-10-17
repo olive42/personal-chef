@@ -20,9 +20,15 @@ policies
 policy_groups
 
 # Pulled by berks vendor -- ignore non-local cookbooks
-cookbooks/
-!cookbooks/user-files/
-!cookbooks/machine-setup/
+cookbooks/build-essential
+cookbooks/compat_resource
+cookbooks/mingw
+cookbooks/nginx
+cookbooks/ohai
+cookbooks/seven_zip
+cookbooks/windows
+cookbooks/yum-epel
+cookbooks/zypper
 
 # Editors
 .vscode/
